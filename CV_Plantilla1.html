@@ -1,0 +1,404 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        html {
+            background-color: black;
+        }
+        
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .page {
+            height: 1580px;
+            width: 100%;
+            margin: 0px 0px;
+            z-index: 1;
+            background: rgba(4, 54, 107, 1);
+            background: -moz-linear-gradient(top, rgba(4, 54, 107, 1) 0%, rgba(88, 96, 240, 0.94) 80%, rgba(88, 96, 240, 0.92) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(4, 54, 107, 1)), color-stop(80%, rgba(88, 96, 240, 0.94)), color-stop(100%, rgba(88, 96, 240, 0.92)));
+            background: -webkit-linear-gradient(top, rgba(4, 54, 107, 1) 0%, rgba(88, 96, 240, 0.94) 80%, rgba(88, 96, 240, 0.92) 100%);
+            background: -o-linear-gradient(top, rgba(4, 54, 107, 1) 0%, rgba(88, 96, 240, 0.94) 80%, rgba(88, 96, 240, 0.92) 100%);
+            background: -ms-linear-gradient(top, rgba(4, 54, 107, 1) 0%, rgba(88, 96, 240, 0.94) 80%, rgba(88, 96, 240, 0.92) 100%);
+            background: linear-gradient(to bottom, rgba(4, 54, 107, 1) 0%, rgba(88, 96, 240, 0.94) 80%, rgba(88, 96, 240, 0.92) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#04366b', endColorstr='#5860f0', GradientType=0);
+        }
+        
+        #cabeceraCV {
+            background-image: url("./img/cabecera.jpg");
+            width: 100%;
+            color: blanchedalmond;
+            padding: 0px;
+            padding-top: 20px;
+            padding-bottom: 1px;
+        }
+        
+        #nombrePrincipal {
+            font-size: 2.3em;
+            text-align: right;
+            margin-bottom: 5px;
+            padding: 0px;
+        }
+        
+        #puestoPrincipal {
+            font-size: 1.8em;
+            text-align: right;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+        
+        #datosSecundarios {
+            font-size: 1em;
+            text-align: right;
+            padding: 0px;
+        }
+        
+        h4 {
+            margin-left: 35%;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+        }
+        
+        a,
+        #sameAsLink {
+            color: rgb(209, 221, 230);
+        }
+        
+        i {
+            margin-right: 7px;
+        }
+        
+        .ulNoDot {
+            list-style: none;
+        }
+        
+        .ulNoDot li {
+            margin-bottom: 10px;
+        }
+        
+        #sobreMi {
+            color: white;
+            margin: auto;
+            margin-top: 25px;
+        }
+        
+        #perfilVertical {
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            width: 350px;
+            padding: 20px 25px;
+            height: 1580px;
+            margin-left: 35px;
+            background-color: rgb(1, 47, 73);
+            align-content: center;
+        }
+        
+        #imagenPrincipal {
+            width: 100%;
+            margin: auto;
+            border-radius: 35px;
+            box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.603);
+            border: solid 5px rgb(125, 169, 199);
+        }
+        
+        #imagenCV {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .bloqueId {
+            margin-right: 100px;
+        }
+        
+        .separador6 {
+            height: 30px;
+        }
+        
+        .fab,
+        .fas {
+            color: white;
+        }
+        
+        .datosContacto,
+        .competenciasPersonales {
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .listaBlanca {
+            color: white;
+            font-weight: bold;
+        }
+        
+        #informacionGeneral {
+            margin-top: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .entradaGeneral {
+            display: table;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0.2), rgb(12, 93, 131, 0.2));
+        }
+        
+        #experienciaLaboral,
+        #formacionRecibida,
+        #formacionAutodidacta {
+            vertical-align: middle;
+            margin-right: 75px;
+            margin-left: 38%;
+        }
+        
+        .itemExperiencia {
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(12, 93, 131, 0));
+            width: 100%;
+            padding: 8px 8px;
+            border-radius: 16px;
+            margin-bottom: 10px;
+        }
+        
+        .logoEmpresa {
+            border-radius: 15px;
+            width: 80px;
+            height: 55px;
+            background-color: white;
+            padding: 3px;
+        }
+        
+        .colLogoEmpresa {
+            margin-right: 10px;
+        }
+        
+        .nombreEmpresa {
+            color: white;
+            font-size: 1.3em;
+            margin-right: 20px;
+        }
+        
+        .puestoEmpresa {
+            color: white;
+            font-size: 1em;
+        }
+        
+        .listaTareas {
+            color: white;
+            margin-top: -10px;
+            margin-left: -20px;
+        }
+        
+        .listaTareas li {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+        
+        .nomreTitulo {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: white;
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .centroTitulo {
+            padding: 0px;
+            margin: 0px;
+            margin-left: 30px;
+        }
+        
+        .fechaTitulo {
+            font-weight: inherit;
+            font-size: 1.2em;
+            color: white;
+        }
+        
+        .itemComplementario {
+            color: white;
+            margin-bottom: 20px;
+            padding: 0px 8px;
+            border-radius: 14px;
+            font-size: 1.2em;
+            background: rgba(0, 36, 214, 0.19);
+            background: -moz-linear-gradient(left, rgba(0, 36, 214, 0.19) 0%, rgba(183, 204, 246, 0.01) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 36, 214, 0.19)), color-stop(100%, rgba(183, 204, 246, 0.01)));
+            background: -webkit-linear-gradient(left, rgba(0, 36, 214, 0.19) 0%, rgba(183, 204, 246, 0.01) 100%);
+            background: -o-linear-gradient(left, rgba(0, 36, 214, 0.19) 0%, rgba(183, 204, 246, 0.01) 100%);
+            background: -ms-linear-gradient(left, rgba(0, 36, 214, 0.19) 0%, rgba(183, 204, 246, 0.01) 100%);
+            background: linear-gradient(to right, rgba(0, 36, 214, 0.19) 0%, rgba(183, 204, 246, 0.01) 100%);
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#0024d6', endColorstr='#b7ccf6', GradientType=1);
+        }
+        
+        .itemComplementario a {
+            color: white;
+        }
+        
+        .entidadCertificadora {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="page">
+        <div id="perfilVertical">
+            <div class="separador6"></div>
+            <div id="imagenCV"><img id="imagenPrincipal" class="m-auto" src="./img/cvprincipal.jpg"></div>
+            <div id="sobreMi">
+                <h3 class="competenciasPersonales">Sobre mi</h3>
+                <p>Mi manera de describirme para otras personas comienza siempre diciendo que soy una persona metódica y seria pero que permite un trato cercano y conciliador para los grupos de trabajo.</p>
+                <p>Me gusta planificar todas las tareas que se presentan para tener una clara visión global y de cada aspecto al detalle, lo que permite un procedimiento óptimo para el trabajo a realizar y una visión clara de todos los pasos a llevar a cabo
+                    y de los problemas que puedan surgir.</p>
+                <p>En mi vida personal también me gusta mantenerme en activo de cara a aspectos profesionales como lo es la formación. En principio con cursos que me permitan aplicar sus conocimientos de forma inmediata al trabajo y más adelante con certificaciones
+                    que avalen mi compromiso y dedicación con mi profesión</p>
+            </div>
+            <div id="datosContacto">
+                <h3 class="datosContacto">Datos de contacto:</h3>
+                <ul class="ulNoDot">
+                    <li>
+                        <a href="linkedin"><i class="fab fa-linkedin-in"></i>Victor Duarte</a>
+                    </li>
+                    <li>
+                        <a href="mailto:victormaduhe@gmail.com"><i class="fas fa-envelope-open-text"></i>victormaduhe@gmail.com</a>
+                    </li>
+                    <li><i class="fas fa-phone"></i><span id="sameAsLink">640 21 03 11</span></li>
+                </ul>
+            </div>
+            <div id="competenciasPersonales">
+                <h3 class="competenciasPersonales">Competencias personales:</h3>
+                <ul class="listaBlanca ulNoDot">
+                    <li><i class="fas fa-file-alt"></i>Carnet de conducir</li>
+                    <li><i class="fas fa-car"></i>Vehículo propio</li>
+                    <li><i class="fas fa-luggage-cart"></i>Disponibilidad para viajar</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="cabeceraCV">
+            <div class="bloqueId">
+                <div class="d-block">
+                    <p id="nombrePrincipal">Víctor Manuel Duarte Herrera</p>
+                </div>
+                <div class="d-block">
+                    <p id="puestoPrincipal">Full Stack Developer</p>
+                </div>
+                <div class="d-block">
+                    <p id="datosSecundarios">25 años <i class="fas fa-globe-europe"></i>Sevilla</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="informacionGeneral">
+            <div class="entradaGeneral">
+                <h4 class="tituloApartado">Experiencia laboral</h4>
+                <div id="experienciaLaboral">
+                    <div class="itemExperiencia d-flex">
+                        <div class="colLogoEmpresa">
+                            <img class="logoEmpresa" src="./img/logo-ayesa.png">
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa">Ayesa AT.</p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>23/09/2019 - Actualmente</p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li><strong>Web FrontEnd Developer:</strong> con tecnologías: Spring jsp y jsf, Ajax, JavaScript, css3, Bootstrap y html5 </li>
+                                    <li><strong>Backend Developer:</strong> desarrollando en Java con Spring,SpringBoot Framework,JPA Repository, Hibernate, Struts</li>
+                                    <li><strong>DBA:</strong> para BDs de distintos entornos</li>
+                                    <li><strong>QA Tester:</strong> para varios proyectos de la Junta de Andalucía</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemExperiencia d-flex">
+                        <div class="colLogoEmpresa">
+                            <img class="logoEmpresa" src="./img/sofitec-300x175.png">
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa">Sofitec Aero S.L.</p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>25/03/2019 - 24/06/2019</p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li><strong>FrontEnd Developer:</strong> para entornos Microsoft.NET (ASP.net y WindowsForms) </li>
+                                    <li><strong>Backend Developer:</strong> con ASP.net Core y C# para aplicaciones Web y Microcontroladores (Sensify)</li>
+                                    <li><strong>DBA:</strong> para Gestores de Oracle y Microsoft</li>
+                                    <li><strong>QA Tester:</strong> para varios proyectos de gestión de piezas de aviación</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="entradaGeneral">
+                <h4 class="tituloApartado">Formación Académica</h4>
+                <div id="formacionRecibida">
+                    <div class="itemAcademico">
+                        <p class="float-right fechaTitulo">2017 - 2019</p>
+                        <p class="nomreTitulo"><i class="fas fa-user-graduate"></i>C.F.G.S Desarrollo de aplicaciones Multiplataforma (DAM)</p>
+                        <p class="centroTitulo">IES Cristóbal de Monroy</p>
+                    </div>
+                    <div class="itemAcademico">
+                        <p class="float-right fechaTitulo">2020 - Actualmente</p>
+                        <p class="nomreTitulo"><i class="fas fa-user-graduate"></i>Ingeniería informática</p>
+                        <p class="centroTitulo">Universidad Nacionad de Educación a Distancia (UNED)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="entradaGeneral">
+                <h4 class="tituloApartado">Formación complementaria</h4>
+                <div id="formacionAutodidacta">
+                    <div class="itemComplementario">
+                        <a href="#"><i class="fas fa-star"></i>Certificado de Desarrollo de apps web con Angular, Java y Python</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Fundación Ayesa</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a href="#"><i class="fas fa-star"></i>Certificado de Desarrollo de apps web con Spring Hibernate y JSF</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Grupo ID</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a href="#"><i class="fas fa-star"></i>Certificado de Curso de Prevención de riesgos laborales</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Academia Tecnas</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a href="#"><i class="fas fa-star"></i>Diploma de Fundamentos de administracion Microsoft Azure</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Grupo Avante</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a href="https://www.udemy.com/course/web-design-secrets/" target="_blanck"><i class="fas fa-plus-square"></i>Web Design for Web Developers</a>
+                    </div>
+                    <div class="itemComplementario">
+                        <a href="https://www.udemy.com/course/the-complete-guide-to-angular-2/" target="_blanck"><i class="fas fa-plus-square"></i>Angular - The Complete Guide (2020 Edition)</a>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
