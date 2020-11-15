@@ -1,0 +1,510 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        html {
+            background-color: black;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .oculto {
+            display: none;
+        }
+
+        .page {
+            height: 1580px;
+            width: 100%;
+            margin: 0px 0px;
+            background: #555;
+        }
+
+        #cabeceraCV {
+            background-image: url("./img/cabecera2.jpg");
+            width: 100%;
+            color: blanchedalmond;
+            padding: 0px;
+            padding-top: 20px;
+            padding-bottom: 1px;
+        }
+
+        .itemAcademico {
+            margin-bottom: 10px;
+        }
+
+        #nombrePrincipal {
+            font-size: 2.3em;
+            text-align: left;
+            margin-bottom: 5px;
+            padding: 0px;
+            padding-left: 35px;
+            color: black;
+            font-weight: bold;
+        }
+
+        #puestoPrincipal {
+            font-size: 1.8em;
+            text-align: left;
+            margin-bottom: 0px;
+            padding: 0px;
+            padding-left: 35px;
+            color: black;
+            font-weight: bold;
+        }
+
+        #datosSecundarios {
+            font-size: 1.3em;
+            text-align: left;
+            padding: 0px;
+            padding-left: 35px;
+            color: black;
+            font-weight: bold;
+        }
+
+        h4 {
+            margin-left: 3%;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+            text-decoration: none;
+        }
+
+        a,
+        #sameAsLink {
+            color: rgb(209, 221, 230);
+        }
+
+        i {
+            margin-right: 7px;
+        }
+
+        .ulNoDot {
+            list-style: none;
+        }
+
+        .ulNoDot li {
+            margin-bottom: 10px;
+        }
+
+        #sobreMi {
+            color: white;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        #perfilVertical {
+            position: absolute;
+            z-index: 2;
+            top: 0px;
+            right: 0em;
+            width: 350px;
+            padding: 20px 25px;
+            height: 1580px;
+            margin-right: 35px;
+            background-color: rgb(105, 114, 102);
+            align-content: center;
+        }
+
+        #imagenPrincipal {
+            width: 100%;
+            margin: auto;
+            border-radius: 35px;
+            box-shadow: 3px 3px 3px 3px rgba(255, 255, 255, 0.603);
+            border: solid 5px rgb(125, 169, 199);
+        }
+
+        #imagenCV {
+            width: 100%;
+            text-align: center;
+        }
+
+        .bloqueId {
+            margin-right: 100px;
+        }
+
+        .separador6 {
+            height: 30px;
+        }
+
+        .fab,
+        .fas {
+            color: white;
+        }
+
+        .datosContacto,
+        .competenciasPersonales {
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .listaBlanca {
+            color: white;
+            font-weight: bold;
+        }
+
+        #informacionGeneral {
+            margin-top: 40px;
+            margin-bottom: 50px;
+            text-align: left !important;
+        }
+
+        .entradaGeneral {
+            display: table;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            background: rgb(160, 191, 156);
+            background: linear-gradient(90deg, rgba(160, 191, 156, 0.3085609243697479) 0%, rgba(130, 199, 126, 0.18531162464985995) 100%);
+        }
+
+        #experienciaLaboral,
+        #formacionRecibida,
+        #formacionAutodidacta {
+            vertical-align: middle;
+            margin-right: 35%;
+            margin-left: 6%;
+        }
+
+        .itemExperiencia {
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 0.1), rgba(12, 93, 131, 0));
+            width: 100%;
+            padding: 8px 8px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        .logoEmpresa {
+            border-radius: 15px;
+            width: 80px;
+            height: 55px;
+            background-color: white;
+            padding: 3px;
+        }
+
+        .colLogoEmpresa {
+            margin-right: 10px;
+        }
+
+        .nombreEmpresa {
+            color: white;
+            font-size: 1.3em;
+            margin-right: 20px;
+        }
+
+        .puestoEmpresa {
+            color: white;
+            font-size: 1em;
+        }
+
+        .listaTareas {
+            color: white;
+            margin-top: -10px;
+            margin-left: -20px;
+            font-size: 1.2em;
+        }
+
+        .listaTareas li {
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .nomreTitulo {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: white;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .centroTitulo {
+            padding: 0px;
+            margin: 0px;
+            margin-left: 30px;
+        }
+
+        .fechaTitulo {
+            font-weight: inherit;
+            font-size: 1.2em;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .itemComplementario {
+            color: white;
+            margin-bottom: 20px;
+            padding: 0px 8px;
+            border-radius: 14px;
+            font-size: 1.2em;
+            background: rgb(150, 0, 142);
+            background: linear-gradient(90deg, rgba(150, 0, 142, 1) 0%, rgba(200, 0, 254, 1) 71%, rgba(181, 181, 181, 0.3085609243697479) 100%, rgba(126, 156, 199, 1) 100%);
+        }
+
+        .itemComplementario a {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .entidadCertificadora {
+            font-size: 0.9em;
+        }
+
+        .iBlack {
+            color: black;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="page">
+        <div id="perfilVertical">
+            <div class="separador6"></div>
+            <div id="imagenCV"><img id="imagenPrincipal" class="m-auto" src="./img/cvprincipal2.jpeg"></div>
+            <div id="sobreMi">
+                <h3 class="competenciasPersonales">Sobre mi</h3>
+                <p>Me considero una persona de aprendizaje rápido, desenvuelta, carismática y extrovertida. </p>
+                <p>En los diversos trabajos que he podido desempeñar he llevado a cabo mi puesto de trabajo con
+                    motivación y sobretodo muchas ganas.</p>
+            </div>
+            <div id="datosContacto">
+                <h3 class="datosContacto">Datos de contacto:</h3>
+                <ul class="ulNoDot">
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/victor-duarte-bb6b3818b/"><i
+                                class="fab fa-linkedin-in"></i>Nath Gutiérrez</a>
+                    </li>
+                    <li>
+                        <a href="mailto:nathilladevainilla93@gmail.com"><i
+                                class="fas fa-envelope-open-text"></i>nathilladevainilla93@gmail.com</a>
+                    </li>
+                    <li><i class="fas fa-phone"></i><span id="sameAsLink">656 80 89 00</span></li>
+                </ul>
+            </div>
+            <div id="competenciasPersonales" style="display: none">
+                <h3 class="competenciasPersonales">Competencias personales:</h3>
+                <ul class="listaBlanca ulNoDot">
+                    <li><i class="fas fa-file-alt"></i>Carnet de conducir</li>
+                    <li><i class="fas fa-car"></i>Vehículo propio</li>
+                    <li><i class="fas fa-luggage-cart"></i>Disponibilidad para viajar</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="cabeceraCV">
+            <div class="bloqueId">
+                <div class="d-block">
+                    <p id="nombrePrincipal">Nazaret Gutiérrez Blanco
+                    </p>
+                </div>
+                <div class="d-block">
+                    <p id="puestoPrincipal">Hostelería</p>
+                </div>
+                <div class="d-block">
+                    <p id="datosSecundarios">27 años <i class="fas fa-globe-europe iBlack"></i>Sevilla</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="informacionGeneral">
+            <div class="entradaGeneral">
+                <h4 class="tituloApartado">Experiencia laboral</h4>
+                <div id="experienciaLaboral">
+                    <div class="itemExperiencia d-flex text-left">
+                        <div class="colLogoEmpresa">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa">CAFETERIA YENA'Z (ALCALÁ DE GUADAÍRA)</p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>Julio – Noviembre 2020</p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li>Camarero de Desayunos.
+                                        Encargada de la preparación y elaboración de desayunos, así como de servirlos en
+                                        sala.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemExperiencia d-flex text-left">
+                        <div class="colLogoEmpresa">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa"> TILDE’S PIZZA (ALCALÁ DE GUADAÍRA)</p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>Julio – Noviembre 2020</p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li>Estuve trabajando como ayudante de pizzería y cocina. En pizzería elaboraba la
+                                        masa artesanalmente, realizaba los moldes, montaba y horneaba. Y en mis labores
+                                        de Ayudante de Cocina, me encargaba de la preparación y reposición de los
+                                        ingredientes necesarios, salsas, corte, etc.: además de la realización de
+                                        algunos platos en plancha, platos fríos, baguetteria y fritos, envasado,
+                                        limpieza etc.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemExperiencia d-flex text-left">
+                        <div class="colLogoEmpresa">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa"> PIZZERIA ‘DA SEBAS’ (ALICANTE)</p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>Marzo 2020</p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li>Atención en barra, servir, montar y hornear pizzas, limpieza, etc. (TPV)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemExperiencia d-flex text-left">
+                        <div class="colLogoEmpresa">
+                            <i class="fas fa-spray-can"></i>
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa">SERIGRAFÍA SEVILLA. </p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>Octubre 2019 – Febrero 2020
+                                </p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li>Encargada de sacar fotolitos, organización y reposición de inventario,
+                                        embalado, preparación de diseños, etc. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="itemExperiencia d-flex text-left">
+                        <div class="colLogoEmpresa">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="colContenidoEmpresa">
+                            <div class="d-flex headerEmpresa">
+                                <p class="nombreEmpresa"> PIZZERIA ‘LA TRAVIATA’</p>
+                                <p class="puestoEmpresa"><i class="fas fa-calendar-alt"></i>DesdeOctubre 2019 – Marzo
+                                    2020</p>
+                            </div>
+                            <div class="d-block">
+                                <ul class="listaTareas">
+                                    <li>Encargada de montar y hornear pizzas, principalmente; y en momentos de
+                                        más afluencia, tareas de barra, camarera de sala, caja, teléfono, y limpieza.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="entradaGeneral">
+                <h4 class="tituloApartado">Formación Académica</h4>
+                <div id="formacionRecibida">
+                    <div class="itemAcademico text-left">
+                        <p class="float-right fechaTitulo">2013</p>
+                        <p class="nomreTitulo"><i class="fas fa-user-graduate"></i>Bachillerato de Arte</p>
+                        <p class="centroTitulo">I.E.S Profesor Tierno Galván </p>
+                    </div>
+                    <div class="itemAcademico text-left">
+                        <p class="float-right fechaTitulo">2013 - 2015</p>
+                        <p class="nomreTitulo"><i class="fas fa-user-graduate"></i>Técnico Superior en Artes Aplicadas
+                            al
+                            Muro</p>
+                        <p class="centroTitulo">Escuela
+                            de Arte de Sevilla </p>
+                    </div>
+                    <div class="itemAcademico text-left">
+                        <p class="float-right fechaTitulo">2016 - 2018</p>
+                        <p class="nomreTitulo"><i class="fas fa-user-graduate"></i>Técnico Superior en Escultura
+                            Aplicada al Espectáculo</p>
+                        <p class="centroTitulo">Escuela
+                            de Arte de Sevilla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="entradaGeneral " style="display: none">
+                <h4 class="tituloApartado">Formación complementaria</h4>
+                <div id="formacionAutodidacta">
+                    <div class="itemComplementario">
+                        <a target="_blank"
+                            href="https://drive.google.com/file/d/1n7hco8DBZRwsi5pmRAVMoXrbs5TiCcKb/view?usp=sharing"><i
+                                class="fas fa-star"></i>Certificado Scrum Master</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Grupo ID</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a target="_blank"
+                            href="https://drive.google.com/file/d/1b-LsHyTVtWZXJu6woKZtiMuj5IcjXVlT/view?usp=sharing"><i
+                                class="fas fa-star"></i>Certificado de Desarrollo de apps web con Angular, Java y
+                            Python</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Fundación Ayesa</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a target="_blank"
+                            href="https://drive.google.com/file/d/1dScjn6nZSvCPfnaxam8EYncOcGoF5fkC/view?usp=sharing"><i
+                                class="fas fa-star"></i>Certificado de Desarrollo de apps web con Spring
+                            Hibernate y JSF</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Grupo ID</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a target="_blank"
+                            href="https://drive.google.com/file/d/1vF-K80nLTI_ZkIqLxiVl6gvM7RtoFyNo/view?usp=sharing"><i
+                                class="fas fa-star"></i>Certificado de Curso de Prevención de riesgos
+                            laborales</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Academia Tecnas</p>
+                    </div>
+                    <div class="itemComplementario">
+                        <a target="_blank"
+                            href="https://drive.google.com/file/d/159W57vNqspDwWDC1Xo1YHkPdMOZ1eGM0/view?usp=sharing"><i
+                                class="fas fa-star"></i>Diploma de Fundamentos de administracion Microsoft
+                            Azure</a>
+                        <p class="entidadCertificadora"><strong>Expedido por:</strong> Grupo Avante</p>
+                    </div>
+                    <div class="oculto">
+                        <div class="itemComplementario">
+                            <a target="_blank" href="https://www.udemy.com/course/web-design-secrets/"><i
+                                    class="fas fa-plus-square"></i>Web Design for Web Developers</a>
+                        </div>
+                        <div class="itemComplementario">
+                            <a target="_blank" href="https://www.udemy.com/course/the-complete-guide-to-angular-2/"><i
+                                    class="fas fa-plus-square"></i>Angular - The Complete Guide (2020 Edition)</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
